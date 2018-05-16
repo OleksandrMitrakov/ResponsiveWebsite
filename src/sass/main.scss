@@ -1,0 +1,161 @@
+//Core Styles
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 1em 0;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin: .5em 0;
+  &:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+}
+
+//Header Showcase------------------------->
+
+#showcase {
+  min-height: 450px;
+  color: #fff;
+  text-align: center;
+  & img {
+    position: absolute;
+    background: #333 url('.././images/troopers.png') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+  & h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+  & .contentWrap {
+    padding: 0 1.5em;
+  }
+}
+
+//Section A------------------------->
+
+#sectionA {
+  background: #eaeaea;
+  color: #333;
+  padding-bottom: 2em;
+  &.contentWrap {
+    padding: 0 1.5em;
+  }
+}
+
+//Section B------------------------->
+
+#sectionB {
+  padding: 2em 1em 1em;
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  & li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+  }
+}
+
+.cardContent {
+  padding: 1.5em;
+}
+
+//Section C------------------------->
+
+#sectionC {
+  background: #fff;
+  color: #333;
+  padding: 2em;
+}
+
+//Section D --Boxes----------------->
+
+#sectionD {
+  &.box {
+    padding: 2em;
+    color: #fff;
+  }
+  & .box:first-child {
+    background: #2690d4;
+  }
+}
+
+//Footer--------------------------->
+
+#mainFooter {
+  padding: 2em;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+//Media Queries--------------------------->
+
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  #sectionA .contentText {
+    columns: 2;
+    column-gap: 2em;
+    & p {
+      padding-top: 0;
+    }
+  }
+
+  .contentWrap, #sectionB ul {
+    grid-column: 2/4;
+  }
+
+  .box, #mainFooter div {
+    grid-column: span 2;
+  }
+
+  #sectionB ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #sectionB li {
+    width: 31%;
+  }
+
+}
+
